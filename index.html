@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Banco</title>
+  </head>
+  <body>
+    <!-- NAVEGAÇÃO -->
+    <nav>
+      <p class="welcome">Acesse sua conta para começar.</p>
+
+      <form class="login">
+        <input
+          type="text"
+          placeholder="Usuário"
+          class="login__input login__input--user"
+        />
+
+        <input
+          type="password"
+          placeholder="Senha"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="app">
+      <!-- SALDO -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Saldo atual</p>
+          <p class="balance__date">
+            Última atualização: <span class="date">05/03/2037</span>
+          </p>
+        </div>
+        <p class="balance__value">R$ 00</p>
+      </div>
+
+      <!-- MOVIMENTAÇÕES -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">
+            2 depósitos
+          </div>
+          <div class="movements__date">3 dias atrás</div>
+          <div class="movements__value">R$ 4000</div>
+        </div>
+
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">1 saque</div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">R$ -378</div>
+        </div>
+      </div>
+
+      <!-- RESUMO -->
+      <div class="summary">
+        <p class="summary__label">Entrada:</p>
+        <p class="summary__value summary__value--in">R$ 00</p>
+
+        <p class="summary__label">Saída:</p>
+        <p class="summary__value summary__value--out">R$ 00</p>
+
+        <p class="summary__label">Taxa:</p>
+        <p class="summary__value summary__value--interest">R$ 00</p>
+
+        <button class="btn--sort">&downarrow; ordenar</button>
+      </div>
+
+      <!-- TRANSFERÊNCIAS -->
+      <div class="operation operation--transfer">
+        <h2>Tranferir dinheiro</h2>
+
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transferir para</label>
+          <label class="form__label">Valor</label>
+        </form>
+      </div>
+
+      <!-- EMPRÉSTIMOS -->
+      <div class="operation operation--loan">
+        <h2>Emprestar dinheiro</h2>
+
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan--amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Valor</label>
+        </form>
+      </div>
+
+      <!-- CANCELAR CONTA -->
+      <div class="operation operation--close">
+        <h2>Cancelar conta</h2>
+
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input type="password" class="form__input form__input--pin" />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirmar usuário</label>
+          <label class="form__label">Senha</label>
+        </form>
+      </div>
+
+      <!-- TIMER -->
+      <p class="logout-timer">
+        A sessão será encerrada em <span class="timer">05:00</span>
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
